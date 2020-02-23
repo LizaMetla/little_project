@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D24508342402E936001AF64D /* Names.txt in Resources */ = {isa = PBXBuildFile; fileRef = D24508332402E936001AF64D /* Names.txt */; };
+		D24508362402ECC9001AF64D /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508352402ECC9001AF64D /* NewTableViewController.swift */; };
+		D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508372402F0E1001AF64D /* StudentsViewController.swift */; };
 		D2B5DEAB23FF431200DC723B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEAA23FF431200DC723B /* AppDelegate.swift */; };
 		D2B5DEAD23FF431200DC723B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEAC23FF431200DC723B /* SceneDelegate.swift */; };
 		D2B5DEB123FF431400DC723B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B5DEB023FF431400DC723B /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D24508332402E936001AF64D /* Names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Names.txt; sourceTree = "<group>"; };
+		D24508352402ECC9001AF64D /* NewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewController.swift; sourceTree = "<group>"; };
+		D24508372402F0E1001AF64D /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		D2B5DEA723FF431200DC723B /* newone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B5DEAA23FF431200DC723B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B5DEAC23FF431200DC723B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 				D2B5DEAA23FF431200DC723B /* AppDelegate.swift */,
 				D2B5DEAC23FF431200DC723B /* SceneDelegate.swift */,
 				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
+				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
+				D24508332402E936001AF64D /* Names.txt */,
+				D24508352402ECC9001AF64D /* NewTableViewController.swift */,
 				D2B5DEC023FF47EC00DC723B /* ViewController.swift */,
 				D2B5DEB023FF431400DC723B /* Assets.xcassets */,
 				D2B5DEC423FF4B6500DC723B /* Storyboard.storyboard */,
@@ -142,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24508342402E936001AF64D /* Names.txt in Resources */,
 				D2B5DEB723FF431400DC723B /* LaunchScreen.storyboard in Resources */,
 				D2B5DEC223FF4B6500DC723B /* Storyboard.storyboard in Resources */,
 				D2B5DEB423FF431400DC723B /* Preview Assets.xcassets in Resources */,
@@ -158,8 +168,10 @@
 			files = (
 				D2B5DEAB23FF431200DC723B /* AppDelegate.swift in Sources */,
 				D2B5DEC623FF528300DC723B /* WelcomeViewController.swift in Sources */,
+				D24508362402ECC9001AF64D /* NewTableViewController.swift in Sources */,
 				D2B5DEC823FFFA2300DC723B /* ProfileViewController.swift in Sources */,
 				D2B5DEAD23FF431200DC723B /* SceneDelegate.swift in Sources */,
+				D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */,
 				D2B5DEC123FF47EC00DC723B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"newone/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Y98MGAVZ7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = newone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"newone/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Y98MGAVZ7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = newone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

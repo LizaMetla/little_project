@@ -183,10 +183,65 @@
                         <viewLayoutGuide key="safeArea" id="uGM-qB-vjw"/>
                     </view>
                     <navigationItem key="navigationItem" id="le4-zh-A4O"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="poG-YN-kIi" id="F5M-5s-42R"/>
+                        <outlet property="profileButtom" destination="HQ4-Z1-6vP" id="FT0-s1-cll"/>
+                        <outlet property="studentsButton" destination="i5i-wE-1og" id="ux4-9i-jjv"/>
+                        <outlet property="welcomeLabel" destination="QGS-pt-eVR" id="GGE-Uc-baf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsz-DR-Az0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="62.946428571428569"/>
+        </scene>
+        <!--Students View Controller-->
+        <scene sceneID="sjr-Cv-f8g">
+            <objects>
+                <viewController id="sfg-Qm-ooH" customClass="StudentsViewController" customModule="newone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uaw-sB-uVc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="amG-Oj-ZrB">
+                                <rect key="frame" x="0.0" y="82" width="414" height="780"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studenIdentifier" id="lYs-Fw-poa">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYs-Fw-poa" id="dpi-RI-hTJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sfg-Qm-ooH" id="v6d-7s-FjI"/>
+                                    <outlet property="delegate" destination="sfg-Qm-ooH" id="grf-8a-aBC"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRR-sq-c8P">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <state key="normal" title="Back to Welcome screen"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gsu-hV-lT7" firstAttribute="trailing" secondItem="RRR-sq-c8P" secondAttribute="trailing" constant="20" id="Est-cB-5cV"/>
+                            <constraint firstItem="amG-Oj-ZrB" firstAttribute="leading" secondItem="gsu-hV-lT7" secondAttribute="leading" id="J2m-bj-bVx"/>
+                            <constraint firstItem="gsu-hV-lT7" firstAttribute="bottom" secondItem="amG-Oj-ZrB" secondAttribute="bottom" id="L4L-c2-vwX"/>
+                            <constraint firstItem="gsu-hV-lT7" firstAttribute="trailing" secondItem="amG-Oj-ZrB" secondAttribute="trailing" id="MPx-4h-QaD"/>
+                            <constraint firstItem="RRR-sq-c8P" firstAttribute="leading" secondItem="gsu-hV-lT7" secondAttribute="leading" constant="20" id="TKa-J5-U97"/>
+                            <constraint firstItem="RRR-sq-c8P" firstAttribute="top" secondItem="gsu-hV-lT7" secondAttribute="top" id="VxZ-ei-3Nq"/>
+                            <constraint firstItem="amG-Oj-ZrB" firstAttribute="centerX" secondItem="RRR-sq-c8P" secondAttribute="centerX" id="eIe-eE-Vef"/>
+                            <constraint firstItem="amG-Oj-ZrB" firstAttribute="top" secondItem="RRR-sq-c8P" secondAttribute="bottom" constant="8" id="uBL-LK-72p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gsu-hV-lT7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOi-0s-QNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2159.4202898550725" y="486.83035714285711"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="3ZB-dX-fpH">
@@ -203,6 +258,12 @@
                                     <navigationItem title="Back to Welcome screen" id="Ccz-T4-tJa"/>
                                 </items>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-GP-TSp">
+                                <rect key="frame" x="0.0" y="98" width="414" height="798"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="HMu-jL-q5D"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="lQb-CI-gWh"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kNQ-pg-3AY"/>

@@ -1,19 +1,23 @@
 //
-//  WelcomeViewController.swift
+//  StudentsViewController.swift
 //  newone
 //
-//  Created by Елизавета Метла on 2/21/20.
+//  Created by Елизавета Метла on 2/23/20.
 //  Copyright © 2020 Елизавета Метла. All rights reserved.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-    @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var profileButtom: UIButton!
-    @IBOutlet weak var studentsButton: UIButton!
-    @IBOutlet weak var logoutButton: UIButton!
+class StudentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
