@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import Foundation
 
 class StudentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let students = StudentsDataStorage()
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        students.studentsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath)
+        studentsCell.textLabel?.te
     }
     
 
