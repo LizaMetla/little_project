@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
-class StudentsDataStorage {
+class StudentsDataStorage : NSObject, UITableViewDataSource {
+    
     var studentsArray = [studenIdentifier]()
     var dataFromFile = ""
     
-    init() {
-        studentsFromFile()
-    }
+//    init() {
+//        studentsFromFile()
+//   }
+    
     func studentsFromFile() {
         if let filepath = Bundle.main.path(forResource: "Names", ofType: "txt") {
             do {
@@ -32,4 +35,31 @@ class StudentsDataStorage {
             
         }
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         studentsFromFile()
+               return studentsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell {
+        var studentsCell = UITableViewCell()
+        studentsFromFile()
+        switch arrayOfStudents[indexPath.row].gender {
+        case "м": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCell2", for: indexPath)
+        case "ж": studentsCell = tableView.dequeueReusableCell(withIdentifier: "classCell",for: indexPath)
+        default:  studentsCell = tableView.dequeueReusableCell(withIdentifier: "mistake",for: indexPath)
+        }
+        studentsCell.textLabel?.text = "\(arrayOfStudents[indexPath.row].name) \(arrayOfStudents[indexPath.row].surname)"
+        return studentsCell
+    }
+    
+    func removeStudentFromData(studentNumber: Int) {
+           arrayOfStudents.remove(at: studentNumber)
+       }
+       
+       func insertStudentArray(student: Student, at: Int) {
+           arrayOfStudents.insert(student, at: at)
+       }
+    
 }
+

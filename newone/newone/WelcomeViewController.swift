@@ -14,10 +14,22 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var studentsButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     
+    var loginNameLabel = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        welcomeLabel.text = loginNameLabel
+        profileButtom.layer.cornerRadius = 5
+        studentsButton.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
+    }
+  
+    @IBAction func ProfileBPushed(_ sender: Any) {
+        performSegue(withIdentifier: "profileVC", sender: nil)
+    }
+    @IBAction func StudentsBPushed(_ sender: Any) {
+         performSegue(withIdentifier: "classVC", sender: nil)
     }
     
 

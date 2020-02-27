@@ -8,18 +8,19 @@
 
 import UIKit
 import Foundation
-
+/*
 class StudentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let students = StudentsDataStorage()
+    var studentNumber = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        students.studentsArray.count
+        students.tableView(tableView, numberOfRowsInSection: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath)
-        studentsCell.textLabel?.te
+       UITableViewCell {
+        students.tableView(tableView, cellForRowAt: indexPath)
     }
     
 
@@ -41,3 +42,5 @@ class StudentsViewController: UIViewController, UITableViewDelegate, UITableView
     */
 
 }
+
+ */
