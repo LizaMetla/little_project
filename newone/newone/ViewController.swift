@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     let validator = Validator()
-    
+    static var login: String = ""
+    static var password: String = ""
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signInButton: UIButton!

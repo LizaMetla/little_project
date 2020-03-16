@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D20234A12407F65A00771D91 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20234A02407F65A00771D91 /* ProfileManager.swift */; };
 		D20234A32407F6AA00771D91 /* StudentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20234A22407F6AA00771D91 /* StudentStruct.swift */; };
+		D20234A524095B5500771D91 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20234A424095B5500771D91 /* TableViewCell.swift */; };
 		D24508342402E936001AF64D /* Names.txt in Resources */ = {isa = PBXBuildFile; fileRef = D24508332402E936001AF64D /* Names.txt */; };
 		D24508362402ECC9001AF64D /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508352402ECC9001AF64D /* NewTableViewController.swift */; };
 		D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508372402F0E1001AF64D /* StudentsViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		D20234A02407F65A00771D91 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		D20234A22407F6AA00771D91 /* StudentStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentStruct.swift; sourceTree = "<group>"; };
+		D20234A424095B5500771D91 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D24508332402E936001AF64D /* Names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Names.txt; sourceTree = "<group>"; };
 		D24508352402ECC9001AF64D /* NewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewController.swift; sourceTree = "<group>"; };
 		D24508372402F0E1001AF64D /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				D20234A02407F65A00771D91 /* ProfileManager.swift */,
 				D24508392403AD1F001AF64D /* StudentsDataStorage.swift */,
 				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
+				D20234A424095B5500771D91 /* TableViewCell.swift */,
 				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
 				D245083B2403BAFE001AF64D /* Validation.swift */,
 				D20234A22407F6AA00771D91 /* StudentStruct.swift */,
@@ -187,6 +190,7 @@
 				D2B5DEAD23FF431200DC723B /* SceneDelegate.swift in Sources */,
 				D245083A2403AD1F001AF64D /* StudentsDataStorage.swift in Sources */,
 				D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */,
+				D20234A524095B5500771D91 /* TableViewCell.swift in Sources */,
 				D20234A32407F6AA00771D91 /* StudentStruct.swift in Sources */,
 				D2B5DEC123FF47EC00DC723B /* ViewController.swift in Sources */,
 			);
