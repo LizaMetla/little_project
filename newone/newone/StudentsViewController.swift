@@ -11,30 +11,39 @@ import Foundation
 
 class StudentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
     let students = StudentsDataStorage()
     var studentNumber = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        students.studentsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "ClassCellGirl")
+        cell.textLabel?.text = students.studentsArray[indexPath.row].name
+        return cell
+
 }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+//        ProfileManager.shared.studentNumber = indexPath.row
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        let studentStorage = StudentsDataStorage()
+//        switch studentStorage.studentsArray[indexPath.row].gender {
+//        case "м": performSegue(withIdentifier: "manVC", sender: nil)
+//        case "ж": performSegue(withIdentifier: "womanVC", sender: nil)
+//        default:
+//            performSegue(withIdentifier: "profileVC", sender: nil)
+//        }
+    }
+    
+    
 
     /*
-    let students = StudentsDataStorage()
-    var studentNumber = 0
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        students.tableView(tableView, numberOfRowsInSection: section)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       UITableViewCell {
-        students.tableView(tableView, cellForRowAt: indexPath)
-    }
-    
+        
 /////
  /*   override func viewDidLoad() {
         super.viewDidLoad()

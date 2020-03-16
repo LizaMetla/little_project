@@ -29,7 +29,7 @@ class WelcomeViewController: UIViewController {
         performSegue(withIdentifier: "profileVC", sender: nil)
     }
     @IBAction func StudentsBPushed(_ sender: Any) {
-         performSegue(withIdentifier: "classVC", sender: nil)
+         performSegue(withIdentifier: "studentsVC", sender: nil)
     }
     
 

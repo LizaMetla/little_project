@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class StudentsDataStorage : NSObject, UITableViewDataSource {
-    
+
+
     var studentsArray = [Student]()
     var dataFromFile = ""
     
@@ -42,17 +43,29 @@ class StudentsDataStorage : NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell {
         var studentsCell = UITableViewCell()
-        studentsFromFile()
-        switch studentsArray[indexPath.row].gender {
-        case "м": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCellBoy", for: indexPath)
-        case "ж": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCellGirl",for: indexPath)
-        default:  studentsCell = tableView.dequeueReusableCell(withIdentifier: "Error",for: indexPath)
+        let student = studentsArray[indexPath.row]
+        switch student.gender {
+        case "м": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCell2", for: indexPath)
+        case "ж": studentsCell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath)
+        default:  studentsCell = tableView.dequeueReusableCell(withIdentifier: "mistake", for: indexPath)
         }
-        studentsCell.textLabel?.text = "\(studentsArray[indexPath.row].name) \(studentsArray[indexPath.row].surname)"
+        studentsCell.textLabel?.text = "\(student.name) \(student.surname)"
         return studentsCell
     }
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        UITableViewCell {
+//        var studentsCell = UITableViewCell()
+//        studentsFromFile()
+//        switch studentsArray[indexPath.row].gender {
+//        case "м": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCellBoy", for: indexPath)
+//        case "ж": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCellGirl",for: indexPath)
+//        default:  studentsCell = tableView.dequeueReusableCell(withIdentifier: "Error",for: indexPath)
+//        }
+//        studentsCell.textLabel?.text = "\(studentsArray[indexPath.row].name) \(studentsArray[indexPath.row].surname)"
+//        return studentsCell
+//    }
     
     func removeStudentFromData(studentNumber: Int) {
            studentsArray.remove(at: studentNumber)
@@ -64,4 +77,3 @@ class StudentsDataStorage : NSObject, UITableViewDataSource {
     
 }
 
-}
