@@ -22,8 +22,17 @@ class StudentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "ClassCellGirl")
+        switch students.studentsArray[indexPath.row].gender {
+        case "м":
+            cell.backgroundColor = .lightGray
+        case "ж":
+            cell.backgroundColor = .systemPink
+        default:
+            cell.backgroundColor = .white
+        }
         cell.textLabel?.text = students.studentsArray[indexPath.row].name
         return cell
+        
 
 }
     
