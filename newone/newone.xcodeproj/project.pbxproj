@@ -24,6 +24,10 @@
 		D2B5DEC223FF4B6500DC723B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B5DEC423FF4B6500DC723B /* Storyboard.storyboard */; };
 		D2B5DEC623FF528300DC723B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */; };
 		D2B5DEC823FFFA2300DC723B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */; };
+		D2F332A7242E038200CD230B /* StudentsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F332A6242E038200CD230B /* StudentsCollectionView.swift */; };
+		D2F332AE242E081400CD230B /* StudentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F332AD242E081400CD230B /* StudentsCollectionViewCell.swift */; };
+		D2F332B1242E3AAC00CD230B /* PrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F332AF242E3AAC00CD230B /* PrViewController.swift */; };
+		D2F332B2242E3AAC00CD230B /* PrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F332B0242E3AAC00CD230B /* PrViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		D2B5DEC323FF4B6500DC723B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D2F332A6242E038200CD230B /* StudentsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsCollectionView.swift; sourceTree = "<group>"; };
+		D2F332AD242E081400CD230B /* StudentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2F332AF242E3AAC00CD230B /* PrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrViewController.swift; sourceTree = "<group>"; };
+		D2F332B0242E3AAC00CD230B /* PrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,19 +86,13 @@
 		D2B5DEA923FF431200DC723B /* newone */ = {
 			isa = PBXGroup;
 			children = (
-				D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */,
 				D2B5DEAA23FF431200DC723B /* AppDelegate.swift */,
 				D2B5DEAC23FF431200DC723B /* SceneDelegate.swift */,
-				D20234A02407F65A00771D91 /* ProfileManager.swift */,
-				D24508392403AD1F001AF64D /* StudentsDataStorage.swift */,
-				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
-				D20234A424095B5500771D91 /* TableViewCell.swift */,
-				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
+				D2F332A8242E057A00CD230B /* controllers */,
+				D2F332B3242E3D4300CD230B /* profile view */,
+				D2F332AA242E060600CD230B /* students files */,
+				D2F332AC242E063C00CD230B /* Cells Folder */,
 				D245083B2403BAFE001AF64D /* Validation.swift */,
-				D20234A22407F6AA00771D91 /* StudentStruct.swift */,
-				D24508332402E936001AF64D /* Names.txt */,
-				D24508352402ECC9001AF64D /* NewTableViewController.swift */,
-				D2B5DEC023FF47EC00DC723B /* ViewController.swift */,
 				D2B5DEB023FF431400DC723B /* Assets.xcassets */,
 				D2B5DEC423FF4B6500DC723B /* Storyboard.storyboard */,
 				D2B5DEB523FF431400DC723B /* LaunchScreen.storyboard */,
@@ -106,6 +108,48 @@
 				D2B5DEB323FF431400DC723B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2F332A8242E057A00CD230B /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D20234A02407F65A00771D91 /* ProfileManager.swift */,
+				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
+				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
+				D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */,
+				D24508352402ECC9001AF64D /* NewTableViewController.swift */,
+				D2B5DEC023FF47EC00DC723B /* ViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		D2F332AA242E060600CD230B /* students files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F332A6242E038200CD230B /* StudentsCollectionView.swift */,
+				D24508392403AD1F001AF64D /* StudentsDataStorage.swift */,
+				D20234A22407F6AA00771D91 /* StudentStruct.swift */,
+				D2F332AD242E081400CD230B /* StudentsCollectionViewCell.swift */,
+				D24508332402E936001AF64D /* Names.txt */,
+			);
+			path = "students files";
+			sourceTree = "<group>";
+		};
+		D2F332AC242E063C00CD230B /* Cells Folder */ = {
+			isa = PBXGroup;
+			children = (
+				D20234A424095B5500771D91 /* TableViewCell.swift */,
+			);
+			path = "Cells Folder";
+			sourceTree = "<group>";
+		};
+		D2F332B3242E3D4300CD230B /* profile view */ = {
+			isa = PBXGroup;
+			children = (
+				D2F332AF242E3AAC00CD230B /* PrViewController.swift */,
+				D2F332B0242E3AAC00CD230B /* PrViewController.xib */,
+			);
+			path = "profile view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F332B2242E3AAC00CD230B /* PrViewController.xib in Resources */,
 				D24508342402E936001AF64D /* Names.txt in Resources */,
 				D2B5DEB723FF431400DC723B /* LaunchScreen.storyboard in Resources */,
 				D2B5DEC223FF4B6500DC723B /* Storyboard.storyboard in Resources */,
@@ -186,12 +231,15 @@
 				D2B5DEC623FF528300DC723B /* WelcomeViewController.swift in Sources */,
 				D24508362402ECC9001AF64D /* NewTableViewController.swift in Sources */,
 				D2B5DEC823FFFA2300DC723B /* ProfileViewController.swift in Sources */,
+				D2F332A7242E038200CD230B /* StudentsCollectionView.swift in Sources */,
 				D245083C2403BAFE001AF64D /* Validation.swift in Sources */,
+				D2F332B1242E3AAC00CD230B /* PrViewController.swift in Sources */,
 				D2B5DEAD23FF431200DC723B /* SceneDelegate.swift in Sources */,
 				D245083A2403AD1F001AF64D /* StudentsDataStorage.swift in Sources */,
 				D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */,
 				D20234A524095B5500771D91 /* TableViewCell.swift in Sources */,
 				D20234A32407F6AA00771D91 /* StudentStruct.swift in Sources */,
+				D2F332AE242E081400CD230B /* StudentsCollectionViewCell.swift in Sources */,
 				D2B5DEC123FF47EC00DC723B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

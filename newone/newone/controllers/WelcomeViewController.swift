@@ -77,7 +77,7 @@ class WelcomeViewController: UIViewController {
             UIView.animate(withDuration: 1,
                            delay: 0,
                            usingSpringWithDamping: 0.5,
-                           initialSpringVelocity: 2.0,
+                           initialSpringVelocity: 2.6,
                            options: .curveEaseIn,
                            animations: { [weak self] in
                             guard let self = self else {return}
@@ -111,7 +111,7 @@ class WelcomeViewController: UIViewController {
             
             UIView.animate(withDuration: 1,
                            delay: 0,
-                           usingSpringWithDamping: 0.5,
+                           usingSpringWithDamping: 0.7,
                            initialSpringVelocity: 10.0,
                            options: .curveEaseInOut,
                            animations: {[weak self] in

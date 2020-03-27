@@ -19,8 +19,8 @@ class ProfileManager {
     var surname = ""
     var age = ""
     var gender = ""
-    private let login = "Artem"
-    private let password = "Manyshev"
+    private let login = "Liza"
+    private let password = "Metla"
     
     
     func defaultUserData() {
