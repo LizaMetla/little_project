@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C17FD56242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C17FD55242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift */; };
 		D20234A12407F65A00771D91 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20234A02407F65A00771D91 /* ProfileManager.swift */; };
 		D20234A32407F6AA00771D91 /* StudentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20234A22407F6AA00771D91 /* StudentStruct.swift */; };
 		D20234A524095B5500771D91 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20234A424095B5500771D91 /* TableViewCell.swift */; };
@@ -15,6 +16,7 @@
 		D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508372402F0E1001AF64D /* StudentsViewController.swift */; };
 		D245083A2403AD1F001AF64D /* StudentsDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508392403AD1F001AF64D /* StudentsDataStorage.swift */; };
 		D245083C2403BAFE001AF64D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245083B2403BAFE001AF64D /* Validation.swift */; };
+		D2621046242ED414002E20CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2621045242ED414002E20CC /* NetworkManager.swift */; };
 		D2B5DEAB23FF431200DC723B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEAA23FF431200DC723B /* AppDelegate.swift */; };
 		D2B5DEAD23FF431200DC723B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEAC23FF431200DC723B /* SceneDelegate.swift */; };
 		D2B5DEB123FF431400DC723B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B5DEB023FF431400DC723B /* Assets.xcassets */; };
@@ -24,13 +26,13 @@
 		D2B5DEC223FF4B6500DC723B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B5DEC423FF4B6500DC723B /* Storyboard.storyboard */; };
 		D2B5DEC623FF528300DC723B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */; };
 		D2B5DEC823FFFA2300DC723B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */; };
-		D2F332A7242E038200CD230B /* StudentsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F332A6242E038200CD230B /* StudentsCollectionView.swift */; };
 		D2F332AE242E081400CD230B /* StudentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F332AD242E081400CD230B /* StudentsCollectionViewCell.swift */; };
 		D2F332B1242E3AAC00CD230B /* PrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F332AF242E3AAC00CD230B /* PrViewController.swift */; };
 		D2F332B2242E3AAC00CD230B /* PrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F332B0242E3AAC00CD230B /* PrViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C17FD55242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		D20234A02407F65A00771D91 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		D20234A22407F6AA00771D91 /* StudentStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentStruct.swift; sourceTree = "<group>"; };
 		D20234A424095B5500771D91 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 		D24508372402F0E1001AF64D /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		D24508392403AD1F001AF64D /* StudentsDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsDataStorage.swift; sourceTree = "<group>"; };
 		D245083B2403BAFE001AF64D /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		D2621045242ED414002E20CC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D2B5DEA723FF431200DC723B /* newone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B5DEAA23FF431200DC723B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B5DEAC23FF431200DC723B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		D2B5DEC323FF4B6500DC723B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D2F332A6242E038200CD230B /* StudentsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsCollectionView.swift; sourceTree = "<group>"; };
 		D2F332AD242E081400CD230B /* StudentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2F332AF242E3AAC00CD230B /* PrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrViewController.swift; sourceTree = "<group>"; };
 		D2F332B0242E3AAC00CD230B /* PrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrViewController.xib; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				D2B5DEAA23FF431200DC723B /* AppDelegate.swift */,
 				D2B5DEAC23FF431200DC723B /* SceneDelegate.swift */,
+				D2621045242ED414002E20CC /* NetworkManager.swift */,
 				D2F332A8242E057A00CD230B /* controllers */,
 				D2F332B3242E3D4300CD230B /* profile view */,
 				D2F332AA242E060600CD230B /* students files */,
@@ -115,6 +118,7 @@
 			children = (
 				D20234A02407F65A00771D91 /* ProfileManager.swift */,
 				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
+				1C17FD55242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift */,
 				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
 				D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */,
 				D24508352402ECC9001AF64D /* NewTableViewController.swift */,
@@ -126,7 +130,6 @@
 		D2F332AA242E060600CD230B /* students files */ = {
 			isa = PBXGroup;
 			children = (
-				D2F332A6242E038200CD230B /* StudentsCollectionView.swift */,
 				D24508392403AD1F001AF64D /* StudentsDataStorage.swift */,
 				D20234A22407F6AA00771D91 /* StudentStruct.swift */,
 				D2F332AD242E081400CD230B /* StudentsCollectionViewCell.swift */,
@@ -230,8 +233,9 @@
 				D20234A12407F65A00771D91 /* ProfileManager.swift in Sources */,
 				D2B5DEC623FF528300DC723B /* WelcomeViewController.swift in Sources */,
 				D24508362402ECC9001AF64D /* NewTableViewController.swift in Sources */,
+				D2621046242ED414002E20CC /* NetworkManager.swift in Sources */,
+				1C17FD56242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift in Sources */,
 				D2B5DEC823FFFA2300DC723B /* ProfileViewController.swift in Sources */,
-				D2F332A7242E038200CD230B /* StudentsCollectionView.swift in Sources */,
 				D245083C2403BAFE001AF64D /* Validation.swift in Sources */,
 				D2F332B1242E3AAC00CD230B /* PrViewController.swift in Sources */,
 				D2B5DEAD23FF431200DC723B /* SceneDelegate.swift in Sources */,

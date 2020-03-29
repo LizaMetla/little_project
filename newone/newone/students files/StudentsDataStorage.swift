@@ -54,18 +54,7 @@ class StudentsDataStorage : NSObject, UITableViewDataSource {
         return studentsCell
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        UITableViewCell {
-//        var studentsCell = UITableViewCell()
-//        studentsFromFile()
-//        switch studentsArray[indexPath.row].gender {
-//        case "м": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCellBoy", for: indexPath)
-//        case "ж": studentsCell = tableView.dequeueReusableCell(withIdentifier: "ClassCellGirl",for: indexPath)
-//        default:  studentsCell = tableView.dequeueReusableCell(withIdentifier: "Error",for: indexPath)
-//        }
-//        studentsCell.textLabel?.text = "\(studentsArray[indexPath.row].name) \(studentsArray[indexPath.row].surname)"
-//        return studentsCell
-//    }
+
     
     func removeStudentFromData(studentNumber: Int) {
            studentsArray.remove(at: studentNumber)

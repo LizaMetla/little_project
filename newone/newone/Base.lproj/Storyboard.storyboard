@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wxf-sa-ekd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wxf-sa-ekd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -343,7 +343,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.24313725490196078" green="0.72941176470588232" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8wo-QA-3UD" firstAttribute="width" secondItem="MRA-Dw-Rrp" secondAttribute="width" multiplier="0.130435" constant="1.9999099999999999" id="0Po-fV-jiK"/>
                             <constraint firstItem="RqD-4w-U3F" firstAttribute="top" secondItem="8wo-QA-3UD" secondAttribute="bottom" constant="33" id="DB6-oT-PMS"/>
@@ -367,11 +367,11 @@
             <point key="canvasLocation" x="2128.985507246377" y="-367.63392857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="z11-Er-ZVO"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="left" width="512" height="512"/>
         <image name="man-user" width="512" height="512"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Kdt-tq-eEf"/>
-    </inferredMetricsTieBreakers>
 </document>

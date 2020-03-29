@@ -8,131 +8,64 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    @IBOutlet weak var studentsLabel: UILabel!
+class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var studentsLabel: UILabel!
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.itemWidth, height: self.studentCollectionView.frame.height * 0.4)
+    var collectionView: UICollectionView!
+    var studentImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .gray
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 40
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = #colorLiteral(red: 0.2431372549, green: 0.7294117647, blue: 1, alpha: 1)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.topAnchor.constraint(equalTo: studentsLabel.bottomAnchor, constant: 10).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        collectionView.register(ProfileCollectionViewCell.self, forCellWithReuseIdentifier: "CollectionCell")
     }
-    
-    
-    
+}
+
+extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        cells.count
+        10
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell =
-            studentCollectionView.dequeueReusableCell(withReuseIdentifier: StudentCollectionViewCell.cellID,
-            for: indexPath) as? StudentCollectionViewCell else {fatalError("no cell")}
-        cell.studentName.text = cells[indexPath.row].name
-        cell.studentSurname.text = cells[indexPath.row].surname
-        switch cells[indexPath.row].gender {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as? ProfileCollectionViewCell else {fatalError("No cell")}
+        ProfileManager.shared.studentDataForProfile(studentNumber: indexPath.row)
+        collectionCell.name.text = ProfileManager.shared.name
+        collectionCell.surname.text = ProfileManager.shared.surname
+        switch ProfileManager.shared.gender {
         case "м":
-            cell.mainImageView.image = UIImage(named: "boy")
+            collectionCell.studentPhoto.image = UIImage(named: "boy")
         default:
-            cell.mainImageView.image = UIImage(named: "girl")
-        }
-        return cell
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        ProfileManager.shared.studentNumber = indexPath.row
-        switch cells[indexPath.row].gender {
-        case "м":
-            let manProfileVC = ProfileViewController(nibName: "ManViewController", bundle: nil)
-            ProfileViewController.page = 2
-            manProfileVC.modalPresentationStyle = .fullScreen
-            self.present(manProfileVC, animated: true, completion: nil)
-        case "ж":
-            let womanProfileVC = ProfileViewController(nibName: "WomanViewController", bundle: nil)
-            ProfileViewController.page = 1
-            womanProfileVC.modalPresentationStyle = .fullScreen
-            self.present(womanProfileVC, animated: true, completion: nil)
-        default:
-            print("No view controller!")
+            collectionCell.studentPhoto.image = UIImage(named: "girl")
         }
         
         
-    private var galleryCollectionView = UICollectionView(frame: <#T##CGRect#>, collectionViewLayout: <#T##UICollectionViewLayout#>)
+        return collectionCell
+    }
+}
 
-
-
-//
-//    @IBOutlet weak var backToWelcome: UINavigationBar!
-//
-//    var studentNumber = 0
-//       var studentNameLabel = "Name"
-//       var studentSurnameLabel = "Surname"
-//       var studentAgeLabel = "Age"
-//       var studentGenderLabel = "Gender"
-//       var infoPartLabel = """
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//a
-//"""
-//
-////    override func viewDidLoad() {
-////        super.viewDidLoad()
-////        let studentDta = ProfileManager(studentNumber: studentNumber)
-////        nameLabel.text = "Name: \(studentData.name)"
-////        surnameLabel.text = "Surname: \(studentData.surname)"
-////        ageLabel.text = "Age: \(studentData.age)"
-////        infoLabel.text = infoPartLabel
-////        switch studentData.gender {
-////        case "м":
-////            genderLabel.text = "Gender: male"
-////        case "ж":
-////            genderLabel.text = "Gender: female"
-////        default:
-////            genderLabel.text = "Gender: unknown"
-////        }
-////
-////        // Do any additional setup after loading the view.
-////    }
-//
-//
-//    /*
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destination.
-//        // Pass the selected object to the new view controller.
-//    }
-//    */
-//
-//}
+extension ProfileViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: UIScreen.main.bounds.width - 80, height: 500)
+    }
 }

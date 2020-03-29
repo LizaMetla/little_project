@@ -15,6 +15,8 @@ class StudentsViewController: UIViewController, UITableViewDelegate, UITableView
     let students = StudentsDataStorage()
     var studentNumber = 0
     
+    let baseURL = ""
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         students.studentsArray.count
@@ -26,7 +28,7 @@ class StudentsViewController: UIViewController, UITableViewDelegate, UITableView
         case "м":
             cell.backgroundColor = .lightGray
         case "ж":
-            cell.backgroundColor = .systemPink
+            cell.backgroundColor = .systemGray6
         default:
             cell.backgroundColor = .white
         }

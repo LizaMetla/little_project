@@ -52,9 +52,10 @@ class ProfileManager {
         }
     }
     func studentDataForProfile(studentNumber: Int) {
-        name = students.studentsArray[studentNumber].name
-        surname = students.studentsArray[studentNumber].surname
-        age = students.studentsArray[studentNumber].age
-        gender = students.studentsArray[studentNumber].gender
+        let studentArray = students.studentsArray[studentNumber]
+        name = studentArray.name
+        surname = studentArray.surname
+        age = studentArray.age
+        gender = studentArray.gender
     }
 }
