@@ -2,7 +2,7 @@
 //  ProfileCollectionViewCell.swift
 //  newone
 //
-//  Created by Артем Манышев on 28.03.2020.
+//  Created by Елизавета Метла on 28.03.2020.
 //  Copyright © 2020 Елизавета Метла. All rights reserved.
 //
 

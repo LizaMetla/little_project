@@ -15,7 +15,7 @@ class StudentsViewController: UIViewController, UITableViewDelegate, UITableView
     let students = StudentsDataStorage()
     var studentNumber = 0
     
-    let baseURL = ""
+    //let baseURL = ""
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
