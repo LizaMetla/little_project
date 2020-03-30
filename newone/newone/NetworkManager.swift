@@ -9,55 +9,66 @@
 import Foundation
 
 class NetworkManager {
-    func fetchData() {
+    
+       static var shared = NetworkManager()
+        var characters: [SWCharacters] = []
+        var charactersCount: Int?
+        var isLoaded = false
+        static var url = "https://swapi.co/api/people/?page=1"
+        func fetchData(url: String) {
+            if url == "nil" {return} else {
             let session = URLSession.shared
-            let url = URL(string: "https://swapi.co/api/people")
-            guard let uri = url else { return }
-            
-            let task = session.dataTask(with: uri) { (data, response, error) in
-                guard let data = data else { return }
-                guard error == nil else { return }
-                //проверка response на тип класса ожидаемого
-                //лежит ли статус код в пределах - коды ошибок
-                guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode)
-                    else { return }
-                //проверка лежит ли статус код в пределах нашего кода
+            guard let url = URL(string: url) else {return}
+            var request = URLRequest(url: url)
+                request.httpMethod = "GET"
+                let dataTask = session.dataTask(with: request) { [weak self] (data, response, error) in
+                guard let data = data else {return}
+                guard error == nil else {return}
+                guard let response = response as? HTTPURLResponse,
+                    (200...299).contains(response.statusCode)
+                    else {return}
                 
-                do {
-                    //старый метод
-    //                let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
-    //                print(json)
-    //                let people = json?.value(forKey: "results") as? NSArray
-    //                print(people)
-                    
-                    let json = try JSONDecoder().decode(SWPeople.self, from: data)
-                    
-                    json.people.forEach {
-                        print($0.name)
-                    }
-                    print(json)
-                } catch {
-                    print(error)
-                }
+                
+                self?.parse(data: data)
             }
-            task.resume()
+            dataTask.resume()
         }
+        }
+    func parse(data: Data) {
+        do {
+            let json = try JSONDecoder().decode(SWData.self, from: data)
+            NetworkManager.url = json.next ?? "nil"
+            json.people.forEach({characters.append(SWCharacters(name: $0.name, birthYear: $0.birth_year, gender: $0.gender))
+                charactersCount = json.count
+                json.people.forEach({print($0.name)})
+            })
+        } catch {
+            print(error)
+        }
+    }
 }
 
-struct SWPeople: Codable {
+        
+struct SWData: Codable {
     let count: Int
-    let next: String
-    let people: [SWChar]
-    
-    //зачем нужен CodingKeys
+    let next: String?
+    let people: [SWPeople]
     enum CodingKeys: String, CodingKey {
         case count
         case next
         case people = "results"
     }
 }
-
-struct SWChar: Codable {
+struct SWPeople: Codable {
     let name: String
+    let birth_year: String
+    let gender: String
+    
+}
+
+struct SWCharacters: Codable {
+    let name: String
+    let birthYear: String
+    let gender: String
 }
 
