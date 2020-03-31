@@ -13,8 +13,8 @@
 		D20234A524095B5500771D91 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20234A424095B5500771D91 /* TableViewCell.swift */; };
 		D2070CB224311FB1001F2F56 /* SWTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2070CB124311FB1001F2F56 /* SWTableViewController.swift */; };
 		D2070CB424312742001F2F56 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2070CB324312742001F2F56 /* Extension.swift */; };
+		D2070CB624337776001F2F56 /* SWCharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */; };
 		D24508342402E936001AF64D /* Names.txt in Resources */ = {isa = PBXBuildFile; fileRef = D24508332402E936001AF64D /* Names.txt */; };
-		D24508362402ECC9001AF64D /* NewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508352402ECC9001AF64D /* NewTableViewController.swift */; };
 		D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508372402F0E1001AF64D /* StudentsViewController.swift */; };
 		D245083A2403AD1F001AF64D /* StudentsDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508392403AD1F001AF64D /* StudentsDataStorage.swift */; };
 		D245083C2403BAFE001AF64D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245083B2403BAFE001AF64D /* Validation.swift */; };
@@ -40,8 +40,8 @@
 		D20234A424095B5500771D91 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D2070CB124311FB1001F2F56 /* SWTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTableViewController.swift; sourceTree = "<group>"; };
 		D2070CB324312742001F2F56 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCharacterTableViewCell.swift; sourceTree = "<group>"; };
 		D24508332402E936001AF64D /* Names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Names.txt; sourceTree = "<group>"; };
-		D24508352402ECC9001AF64D /* NewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewController.swift; sourceTree = "<group>"; };
 		D24508372402F0E1001AF64D /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		D24508392403AD1F001AF64D /* StudentsDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsDataStorage.swift; sourceTree = "<group>"; };
 		D245083B2403BAFE001AF64D /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -122,12 +122,12 @@
 			children = (
 				D20234A02407F65A00771D91 /* ProfileManager.swift */,
 				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
+				D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */,
 				1C17FD55242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift */,
 				D2070CB124311FB1001F2F56 /* SWTableViewController.swift */,
 				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
 				D2070CB324312742001F2F56 /* Extension.swift */,
 				D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */,
-				D24508352402ECC9001AF64D /* NewTableViewController.swift */,
 				D2B5DEC023FF47EC00DC723B /* ViewController.swift */,
 			);
 			path = controllers;
@@ -236,10 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B5DEAB23FF431200DC723B /* AppDelegate.swift in Sources */,
+				D2070CB624337776001F2F56 /* SWCharacterTableViewCell.swift in Sources */,
 				D20234A12407F65A00771D91 /* ProfileManager.swift in Sources */,
 				D2B5DEC623FF528300DC723B /* WelcomeViewController.swift in Sources */,
 				D2070CB224311FB1001F2F56 /* SWTableViewController.swift in Sources */,
-				D24508362402ECC9001AF64D /* NewTableViewController.swift in Sources */,
 				D2621046242ED414002E20CC /* NetworkManager.swift in Sources */,
 				1C17FD56242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift in Sources */,
 				D2B5DEC823FFFA2300DC723B /* ProfileViewController.swift in Sources */,

@@ -99,3 +99,56 @@ extension WelcomeViewController {
        }
 
 }
+
+//extension NetworkManager: UITableViewDataSource {
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        1
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//         characters.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let characterCell =
+//            tableView.dequeueReusableCell(withIdentifier: "student", for: indexPath) as? StudentTableViewCell else {fatalError("No cell!")}
+//        let character = characters[indexPath.row]
+//        characterCell.studentName.text = character.name
+//
+//        switch character.gender {
+//        case "male":
+//            characterCell.genderImage.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+//            characterCell.genderImage.image = UIImage(named: "boy")
+//        case "female":
+//            characterCell.genderImage.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+//            characterCell.genderImage.image = UIImage(named: "girl")
+//        case "n/a", "none":
+//            characterCell.genderImage.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+//            characterCell.genderImage.image = UIImage(named: "droid")
+//        case "hermaphrodite":
+//            characterCell.genderImage.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
+//            characterCell.genderImage.image = UIImage(named: "jabba")
+//        default:
+//            print("wrong gender")
+//        }
+//        return characterCell
+//    }
+//
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            characters.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//        true
+//    }
+//
+//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//                let student = characters[sourceIndexPath.row]
+//                characters.insert(student, at: destinationIndexPath.row)
+//                characters.remove(at: sourceIndexPath.row)
+//    }
+//}
