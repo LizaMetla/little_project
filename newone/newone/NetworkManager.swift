@@ -9,17 +9,20 @@
 import Foundation
 
 class NetworkManager {
-    
-    func fetchData() {
-            var shared = NetworkManager()
-            var characters: [SWCharacters] = []
-            var charactersCount: Int?
+    static let shared = NetworkManager()
+    var characters: [SWCharacters] = []
+
+    func fetchData(completion: @escaping (Data) -> Void) {
             let session = URLSession.shared
-            let url = URL(string: "https://swapi.co/api/people/")
+            var charactersCount: Int?
+            
+            var url = URL(string: "https://swapi.co/api/people/")
             guard let uri = url else { return }
             
             let task = session.dataTask(with: uri) { (data, response, error) in
                 guard let data = data else { return }
+                completion(data)
+                print(data)
                 guard error == nil else { return }
                 //проверка response на тип класса ожидаемого
                 //лежит ли статус код в пределах - коды ошибок
@@ -29,8 +32,12 @@ class NetworkManager {
                 
                 do {
                     let json = try JSONDecoder().decode(SWData.self, from: data)
-                    NetworkManager.uri = json.next
-                    json.people.forEach({characters.append(SWCharacters(name: $0.name, birthYear: $0.birth_year, gender: $0.gender))
+                    
+                    //to check those 2 lines
+                    guard let nextPage = json.next else { return }
+                    url = URL(string: nextPage)
+                    //
+                    json.people.forEach({self.characters.append(SWCharacters(name: $0.name, birthYear: $0.birth_year, gender: $0.gender))
                         charactersCount = json.count
                         json.people.forEach({print($0.name)})
                     })
@@ -40,43 +47,7 @@ class NetworkManager {
             }
             task.resume()
         }
-//
-//       static var shared = NetworkManager()
-//        var characters: [SWCharacters] = []
-//        var charactersCount: Int?
-//        var isLoaded = false
-//        static var url = "https://swapi.co/api/people/"
-//        func fetchData(url: String) {
-//            if url == "nil" {return} else {
-//            let session = URLSession.shared
-//            guard let url = URL(string: url) else {return}
-//            var request = URLRequest(url: url)
-//                request.httpMethod = "GET"
-//                let dataTask = session.dataTask(with: request) { [weak self] (data, response, error) in
-//                guard let data = data else {return}
-//                guard error == nil else {return}
-//                guard let response = response as? HTTPURLResponse,
-//                    (200...299).contains(response.statusCode)
-//                    else {return}
-//
-//
-//                self?.parse(data: data)
-//            }
-//            dataTask.resume()
-//        }
-//        }
-//    func parse(data: Data) {
-//        do {
-//            let json = try JSONDecoder().decode(SWData.self, from: data)
-//            NetworkManager.url = json.next ?? "nil"
-//            json.people.forEach({characters.append(SWCharacters(name: $0.name, birthYear: $0.birth_year, gender: $0.gender))
-//                charactersCount = json.count
-//                json.people.forEach({print($0.name)})
-//            })
-//        } catch {
-//            print(error)
-//        }
-//    }
+
 }
 
         
@@ -102,4 +73,5 @@ struct SWCharacters: Codable {
     let birthYear: String
     let gender: String
 }
+
 

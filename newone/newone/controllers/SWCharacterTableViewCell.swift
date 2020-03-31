@@ -9,7 +9,9 @@
 import UIKit
 
 class SWCharacterTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var nameFolder: UILabel!
+    @IBOutlet weak var birthDateFolder: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

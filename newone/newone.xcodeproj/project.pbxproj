@@ -122,8 +122,8 @@
 			children = (
 				D20234A02407F65A00771D91 /* ProfileManager.swift */,
 				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
-				D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */,
 				1C17FD55242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift */,
+				D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */,
 				D2070CB124311FB1001F2F56 /* SWTableViewController.swift */,
 				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
 				D2070CB324312742001F2F56 /* Extension.swift */,

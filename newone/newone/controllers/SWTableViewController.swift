@@ -8,29 +8,46 @@
 
 import UIKit
 
-class SWTableViewController: UIViewController {
+class SWTableViewController: UIViewController{
+//UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBAction func isBackButtonPushed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    final let url = URL(string: "https://swapi.co/api/people/")
     let swCharacters = NetworkManager.fetchData
-    
     static var isSWProfilePage = false
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+//    func downloadJSON() {
+//        guard let downloadURL = url else { return }
+//        URLSession.shared.dataTask(with: downloadURL) {data, URLResponse, error in print("downloaded")
+//        }.resume()
+//}
+    
+    
+}
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    
 
     // MARK: - Table view data source
 
@@ -99,4 +116,4 @@ class SWTableViewController: UIViewController {
     }
     */
 
-}
+
