@@ -14,6 +14,7 @@
 		D2070CB224311FB1001F2F56 /* SWTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2070CB124311FB1001F2F56 /* SWTableViewController.swift */; };
 		D2070CB424312742001F2F56 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2070CB324312742001F2F56 /* Extension.swift */; };
 		D2070CB624337776001F2F56 /* SWCharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */; };
+		D2070CB82434DD7E001F2F56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2070CB72434DD7E001F2F56 /* Constants.swift */; };
 		D24508342402E936001AF64D /* Names.txt in Resources */ = {isa = PBXBuildFile; fileRef = D24508332402E936001AF64D /* Names.txt */; };
 		D24508382402F0E1001AF64D /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508372402F0E1001AF64D /* StudentsViewController.swift */; };
 		D245083A2403AD1F001AF64D /* StudentsDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24508392403AD1F001AF64D /* StudentsDataStorage.swift */; };
@@ -41,6 +42,7 @@
 		D2070CB124311FB1001F2F56 /* SWTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTableViewController.swift; sourceTree = "<group>"; };
 		D2070CB324312742001F2F56 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCharacterTableViewCell.swift; sourceTree = "<group>"; };
+		D2070CB72434DD7E001F2F56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D24508332402E936001AF64D /* Names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Names.txt; sourceTree = "<group>"; };
 		D24508372402F0E1001AF64D /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		D24508392403AD1F001AF64D /* StudentsDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsDataStorage.swift; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 				D2F332B3242E3D4300CD230B /* profile view */,
 				D2F332AA242E060600CD230B /* students files */,
 				D2F332AC242E063C00CD230B /* Cells Folder */,
-				D245083B2403BAFE001AF64D /* Validation.swift */,
 				D2B5DEB023FF431400DC723B /* Assets.xcassets */,
 				D2B5DEC423FF4B6500DC723B /* Storyboard.storyboard */,
 				D2B5DEB523FF431400DC723B /* LaunchScreen.storyboard */,
@@ -120,11 +121,13 @@
 		D2F332A8242E057A00CD230B /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D245083B2403BAFE001AF64D /* Validation.swift */,
 				D20234A02407F65A00771D91 /* ProfileManager.swift */,
 				D2B5DEC723FFFA2300DC723B /* ProfileViewController.swift */,
 				1C17FD55242EC2CF00CB13C9 /* ProfileCollectionViewCell.swift */,
 				D2070CB524337776001F2F56 /* SWCharacterTableViewCell.swift */,
 				D2070CB124311FB1001F2F56 /* SWTableViewController.swift */,
+				D2070CB72434DD7E001F2F56 /* Constants.swift */,
 				D24508372402F0E1001AF64D /* StudentsViewController.swift */,
 				D2070CB324312742001F2F56 /* Extension.swift */,
 				D2B5DEC523FF528300DC723B /* WelcomeViewController.swift */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B5DEAB23FF431200DC723B /* AppDelegate.swift in Sources */,
+				D2070CB82434DD7E001F2F56 /* Constants.swift in Sources */,
 				D2070CB624337776001F2F56 /* SWCharacterTableViewCell.swift in Sources */,
 				D20234A12407F65A00771D91 /* ProfileManager.swift in Sources */,
 				D2B5DEC623FF528300DC723B /* WelcomeViewController.swift in Sources */,

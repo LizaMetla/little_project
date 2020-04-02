@@ -14,6 +14,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var studentsButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var swButton: UIButton!
+    @IBOutlet weak var logOutButton: UIButton!
     
     //
     let pushButton = UIButton()
@@ -25,14 +26,26 @@ class WelcomeViewController: UIViewController {
     
     var numberOfPush = 0
     //
-    var loginNameLabel = ""
+    var loginNameLabel = "   "
     
+    @IBAction func logOutIsPushed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = loginNameLabel
-        profileButtom.layer.cornerRadius = 5
-        studentsButton.layer.cornerRadius = 5
-        initButton()
+        
+        //logine name
+        //welcomeLabel.text = loginNameLabel
+        
+        profileButtom.layer.cornerRadius = 7
+        studentsButton.layer.cornerRadius = 7
+        swButton.layer.cornerRadius = 7
+        
+        //view.setGradientBackgroundColor(colorOne: Colors.blue, colorTwo: Colors.orange)
+        
+        
+        //add action button
+        //initButton()
 
         // Do any additional setup after loading the view.
     }

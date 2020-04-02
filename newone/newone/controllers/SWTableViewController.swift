@@ -9,7 +9,7 @@
 import UIKit
 
 class SWTableViewController: UIViewController{
-//UITableViewDelegate, UITableViewDataSource
+
     
     @IBOutlet weak var tableView: UITableView!
     @IBAction func isBackButtonPushed(_ sender: Any) {
@@ -20,18 +20,16 @@ class SWTableViewController: UIViewController{
     let swCharacters = NetworkManager.fetchData
     static var isSWProfilePage = false
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //added in lesson
+        NetworkManager.shared.fetchData { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
+    //
+    
     
 //    func downloadJSON() {
 //        guard let downloadURL = url else { return }
@@ -41,7 +39,20 @@ class SWTableViewController: UIViewController{
     
     
 }
-    
+//TO DO
+//extension SWTableViewController : UITableViewDelegate, UITableViewDataSource
+//{
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//       // swCharacters
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//       //
+//    }
+//
+//
+//}
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

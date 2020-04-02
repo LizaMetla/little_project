@@ -22,7 +22,16 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        signInButton.layer.cornerRadius = 5
+        signInButton.layer.cornerRadius = 10
+        loginField.layer.cornerRadius = 10
+        passwordField.layer.cornerRadius = 10
+        
+        passwordField.layer.masksToBounds = true
+        loginField.layer.masksToBounds = true
+        view.setFourGradientBackgroundColor(colorOne: Colors.black, colorTwo: Colors.blue, colorThree: Colors.brightOrange, colorFour: Colors.blue)
+        
+        loginField.setGradientBackgroundColor(colorOne: Colors.blue, colorTwo: Colors.lightGrey)
+        //view.setGradientBackgroundColor(colorOne: Colors.darkGrey, colorTwo: Colors.lightGrey)
         // Do any additional setup after loading the view.
     }
     

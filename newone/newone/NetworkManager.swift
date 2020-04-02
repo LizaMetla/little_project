@@ -11,8 +11,8 @@ import Foundation
 class NetworkManager {
     static let shared = NetworkManager()
     var characters: [SWCharacters] = []
-
-    func fetchData(completion: @escaping (Data) -> Void) {
+/// Reloading data
+    func fetchData(completion: @escaping () -> Void) {
             let session = URLSession.shared
             var charactersCount: Int?
             
@@ -21,7 +21,10 @@ class NetworkManager {
             
             let task = session.dataTask(with: uri) { (data, response, error) in
                 guard let data = data else { return }
-                completion(data)
+                DispatchQueue.main.async {
+                    completion()
+                }
+        
                 print(data)
                 guard error == nil else { return }
                 //проверка response на тип класса ожидаемого
